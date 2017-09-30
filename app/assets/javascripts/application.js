@@ -12,4 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require uikit
+//= require uikit-components
 //= require_tree .

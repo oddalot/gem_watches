@@ -35,6 +35,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use active admit for product administration
+gem 'activeadmin'
+
+# Plus integrations with:
+gem 'devise'
+gem 'cancan' # or cancancan
+gem 'draper'
+gem 'pundit'
+
+# use uikit for look and feel of app
+gem 'uikit-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
