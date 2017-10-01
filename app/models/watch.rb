@@ -1,3 +1,2 @@
 class Watch < Product
-
 end
