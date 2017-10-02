@@ -1,6 +1,33 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="gm-home-slider">
+  <div class="uk-container uk-container-center">
+    <div class="uk-slidenav-position" data-uk-slideshow="{height: '700px', animation:'scroll'}">
+      <ul class="uk-slideshow">
+        <li>
+          <div class="uk-grid">
+            <div class="uk-width-1-3">
+              <img src="<%= @watch_image1.image.url %>" width="auto" height="100%" alt="">
+            </div>
+            <div class="uk-width-2-3">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid">
+            <div class="uk-width-1-3">
+              <img src="<%= @watch_image2.image.url %>" width="auto" height="100%" alt="">
+            </div>
+            <div class="uk-width-2-3">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+      <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+      <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+          <li data-uk-slideshow-item="0"><a href=""></a></li>
+          <li data-uk-slideshow-item="1"><a href=""></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<form class="uk-form">
-    <input type="text" data-uk-timepicker>
-</form>
