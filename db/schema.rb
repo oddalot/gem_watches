@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171001202714) do
+ActiveRecord::Schema.define(version: 20171002230354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(version: 20171001202714) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "collections", force: :cascade do |t|
+    t.string "name"
+    t.string "collection_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_images", force: :cascade do |t|
     t.bigint "product_id"
     t.datetime "created_at", null: false
@@ -65,6 +72,8 @@ ActiveRecord::Schema.define(version: 20171001202714) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "collection_id"
+    t.index ["collection_id"], name: "index_products_on_collection_id"
   end
 
   create_table "watches", force: :cascade do |t|
@@ -73,4 +82,5 @@ ActiveRecord::Schema.define(version: 20171001202714) do
   end
 
   add_foreign_key "product_images", "products"
+  add_foreign_key "products", "collections"
 end

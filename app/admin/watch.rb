@@ -11,7 +11,7 @@ ActiveAdmin.register Watch do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  permit_params :title, :short_description, :long_description, :price, product_images_attributes: [:product_id, :image]
+  permit_params :title, :short_description, :long_description, :price, :collection_id, product_images_attributes: [:product_id, :image]
 
   form do |f|
     f.semantic_errors # shows errors on :base
